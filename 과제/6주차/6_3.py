@@ -37,5 +37,3 @@ t.goto(-300,250)
 t.speed(1)
 t.pendown()
 screen.listen()
-
-input()
