@@ -1,3 +1,4 @@
+# coding:utf-8
 num=0
 result=0
 list=[] 
