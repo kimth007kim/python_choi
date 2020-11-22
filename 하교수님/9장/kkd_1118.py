@@ -110,17 +110,50 @@
 # print("multi()에서 돌려준 값 ==> %d, %d" % (hap,sub))
 
 ##함수 선언 부분 ##
-def para_func(*para):
-    result=0
-    for num in para:
-        result =result+num
-    return result
+# def para_func(*para):
+#     result=0
+#     for num in para:
+#         result =result+num
+#     return result
 
-##전역 변수 선언 부분 ##
-hap=0
+# ##전역 변수 선언 부분 ##
+# hap=0
 
-##메인 코드 부분 ##
-hap = para_func(10,20)
-print("매개변수가 2개인 함수를 호출한 결과 ==> %d" %hap)
-hap = para_func(10,20,30)
-print("매개변수가 3개인 함수를 호출한 결과 ==> %d" %hap)
+# ##메인 코드 부분 ##
+# hap = para_func(10,20)
+# print("매개변수가 2개인 함수를 호출한 결과 ==> %d" %hap)
+# hap = para_func(10,20,30)
+# print("매개변수가 3개인 함수를 호출한 결과 ==> %d" %hap)
+
+import random
+
+#함수 선언 부분 ##
+def getNumber():
+    return random.randrange(1,46)
+
+#전역 변수 선언부분 ##
+lotto = []
+num=0
+
+#메인 코드 부분 ##
+print("**로또 추첨을 시작합니다.**\n")
+
+while True:
+    num =getNumber()
+    if lotto.count(num)==0:
+        lotto.append(num)
+    if len(lotto)>=6:
+        break
+
+print("추첨된 로또 번호 ==> ", end='')
+lotto.sort()
+for i in range(0,6):
+    print("%d " %lotto[i],end='')
+
+## 함수 선언 부분 ##
+# def func1():
+#     print("Module1.py의 func1()이 호출됨.")
+# def func2():
+#     print("Module1.py의 func2()이 호출됨.")
+# def func3():
+#     print("Module1.py의 func3()이 호출됨.")
