@@ -5,3 +5,4 @@ for i in range(0,100):
 
 len(aa)
 # print(aa)
+print(len(aa))
